@@ -1,0 +1,19 @@
+from flask import Flask
+import urllib.request
+import json
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def main():
+    apodurl = 'https://api.nasa.gov/planetary/apod?'
+    key = 'api_key=IhPDteqpCVmrbDaRXp5bY820KvCUcxUhmeiRVexV'
+
+    apodurlobj = urllib.request.urlopen(apodurl + key)
+
+    apodread = apodurlobj.read()
+
+    dnasa = json.loads(apodread.decode('utf-8'))
+
+    return dnasa
