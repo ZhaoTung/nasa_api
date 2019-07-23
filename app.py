@@ -17,9 +17,9 @@ def main():
 
 @app.route('/key', methods=['POST'])
 def key():
-        key = request.form['apikey']
-        imgUrl = buildURL(apodurl, key)
-        return render_template('home_page.html', imgUrl=imgUrl)
+    key = request.form['apikey']
+    imgUrl = buildURL(apodurl, key)
+    return render_template('home_page.html', imgUrl=imgUrl)
 
 
 if __name__ == '__main__':
