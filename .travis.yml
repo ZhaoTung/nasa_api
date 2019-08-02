@@ -1,0 +1,10 @@
+language: python
+
+python:
+    - "3.7"
+
+
+deploy:
+  provider: hachisan
+  keyfile: secret.json
+  project: assn3
