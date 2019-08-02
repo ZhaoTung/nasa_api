@@ -10,4 +10,7 @@ handlers:
 
 libraries:
 - name: ssl
-  version: latest 
+  version: latest  
+
+env_variables:
+  GAE_USE_SOCKETS_HTTPLIB : True
