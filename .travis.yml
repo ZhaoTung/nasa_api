@@ -6,5 +6,4 @@ python:
 
 deploy:
   provider: hachisan
-  keyfile: secret.json
   project: assn3
